@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SalesCalculator {
-    public class Sales {
+    public class Sale {
         public string ShopNameA { get; set; }
 
         public string ProductCategory { get; set; }
