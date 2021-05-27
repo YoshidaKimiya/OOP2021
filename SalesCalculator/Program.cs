@@ -8,8 +8,14 @@ using System.Threading.Tasks;
 namespace SalesCalculator {
     class Program {
         static void Main(string[] args) {
-        //List<Sale> sales = ReadSales("sales.csv");
+            //List<Sale> sales = ReadSales("sales.csv");
+            SalesCounter sales = new SalesCounter(ReadSales("Sales.csv"));
 
+            Dictionary<string, int> amountPerStore = sales.GetPerStoreSales();
+            foreach (KeyValuePair<string,int>obj in amountPerStore) {
+                Console.WriteLine("{0} {1}", obj.Key, obj.Value);
+
+            }
         }
         static List<Sale> ReadSales(string filePath) {
             List<Sale> sales = new List<Sale>();
@@ -17,7 +23,7 @@ namespace SalesCalculator {
             foreach(string line in lines) {
                 string[] items = line.Split(',');
                 Sale sale = new Sale {
-                    ShopNameA = items[0],
+                    ShopName = items[0],
                     ProductCategory = items[1],
                     Amount = int.Parse(items[2])
                 };
