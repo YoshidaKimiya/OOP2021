@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SalesCalculator {
     //売上集計クラス
     class SalesCounter {
-        private List<Sale> _sales;
+        private IEnumerable<Sale> _sales;
 
         public SalesCounter(string filePath) {
             _sales = ReadSales(filePath);
