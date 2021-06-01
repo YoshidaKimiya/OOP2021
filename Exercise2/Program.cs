@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 namespace Exercise2 {
     class Program {
         static void Main(string[] args) {
-            for (int inch = 1; inch <= 10; inch++) {
+            PrintInchToMeterList(1, 10);
+        }
+        private static void PrintInchToMeterList(int start, int stop) {
+            for (int inch = start; inch <= stop; inch++) {
                 double meter = InchConverter.ToMeter(inch);
-                Console.WriteLine("{0} ih = {1:0.0000} m", inch, meter);
+                Console.WriteLine("{0}ih = {1:0.0000} m", inch, meter);
             }
-
-
         }
     }
 }
