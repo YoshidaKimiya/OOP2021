@@ -24,7 +24,7 @@ namespace Test01 {
                 Student student = new Student {
                     Name = items[0],
                     Subject = items[1],
-                    Score = int.Parse(items[2]),
+                    score = int.Parse(items[2]),
                 };
                 students.Add(student);
             }
@@ -36,26 +36,29 @@ namespace Test01 {
 
 
 
-    }
+
 
         //メソッドの概要： 
-        public Dictionary<string, int> GetPerStudentScore() {
-        Dictionary<string, int> dict = new Dictionary<string, int>();
-        foreach (Student student in _score) {
-            if (dict.ContainsKey(student.Subject))
-                //すでにコレクションに店舗が設定されている
-                dict[student.Subject] += student.Score;
-            else
-                //コレクションへ店舗を登録
-                dict[student.Subject] = student.Score;
+        public IDictionary<string, int> GetPerStudentScore() {
+            var dict = new Dictionary<string, int>();
+            foreach (var student in _score) {
+                if (dict.ContainsKey(student.Subject)) {
+                    //すでにコレクションに店舗が設定されている
+                    dict[student.Subject] += student.score;
+                } else {
+                    //コレクションへ店舗を登録
+                    dict[student.Subject] = student.score;
+                }
+            }
+            return dict;
+
+
         }
-        return dict;
+
     }
 
-
-
-
-
 }
+
+
  
 

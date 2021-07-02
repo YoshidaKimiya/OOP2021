@@ -45,21 +45,16 @@ namespace Test02 {
         //問題２　偶数の最大値を表示
         //　　　　出力結果【94】
         private static void Exercise02(List<int> numbers) {
-            int sum = 0;
-            List<int> num = numbers.Where(n => n % 2 == 0).ToList();
-            foreach (var n in num) {
-                sum += n;
 
-            }
-            Console.WriteLine(sum);
+            Console.WriteLine(numbers.Where(n => n % 2 == 0).Max());
 
         }
         //問題３　昇順に並べて表示（遅延実行とする）
         //　　　　出力結果【12 14 17 20 31 35 40 48 53 76 87 91 94】
         private static void Exercise03(List<int> numbers) {
 
-            var num = numbers.OrderBy(n => n);
-            foreach (var n in num) {
+            var nums = numbers.OrderBy(n => n);
+            foreach (var num in nums) {
                 Console.WriteLine(num);
             }
             
