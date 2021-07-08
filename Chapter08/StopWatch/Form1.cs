@@ -38,7 +38,13 @@ namespace StopWatch {
         }
 
         private void btRap_Click(object sender, EventArgs e) {
-            lbxRaplist.Items = sw.ElapsedMilliseconds;
+            lbxRap.Items.Insert(0, lbTimerDisp.Text);
+        }
+
+        private void btReset_Click(object sender, EventArgs e) {
+            sw.Reset();
+            lbxRap.Items.Clear();
+            lbTimerDisp.Text = sw.Elapsed.ToString(@"hh\:mm\:ss\.ff");
         }
     }
 }

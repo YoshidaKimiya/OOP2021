@@ -28,10 +28,10 @@ namespace StopWatch {
             this.lbTimerDisp = new System.Windows.Forms.Label();
             this.btStart = new System.Windows.Forms.Button();
             this.btRap = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btReset = new System.Windows.Forms.Button();
             this.btStop = new System.Windows.Forms.Button();
             this.tm = new System.Windows.Forms.Timer(this.components);
-            this.lbxRaplist = new System.Windows.Forms.ListBox();
+            this.lbxRap = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lbTimerDisp
@@ -64,14 +64,15 @@ namespace StopWatch {
             this.btRap.UseVisualStyleBackColor = true;
             this.btRap.Click += new System.EventHandler(this.btRap_Click);
             // 
-            // button3
+            // btReset
             // 
-            this.button3.Location = new System.Drawing.Point(308, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(246, 66);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btReset.Location = new System.Drawing.Point(308, 190);
+            this.btReset.Name = "btReset";
+            this.btReset.Size = new System.Drawing.Size(246, 66);
+            this.btReset.TabIndex = 1;
+            this.btReset.Text = "Reset";
+            this.btReset.UseVisualStyleBackColor = true;
+            this.btReset.Click += new System.EventHandler(this.btReset_Click);
             // 
             // btStop
             // 
@@ -83,24 +84,22 @@ namespace StopWatch {
             this.btStop.UseVisualStyleBackColor = true;
             this.btStop.Click += new System.EventHandler(this.btStop_Click);
             // 
-            // lbxRaplist
+            // lbxRap
             // 
-            this.lbxRaplist.AllowDrop = true;
-            this.lbxRaplist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.lbxRaplist.FormattingEnabled = true;
-            this.lbxRaplist.Location = new System.Drawing.Point(567, 31);
-            this.lbxRaplist.Name = "lbxRaplist";
-            this.lbxRaplist.Size = new System.Drawing.Size(228, 212);
-            this.lbxRaplist.TabIndex = 2;
-            this.lbxRaplist.UseWaitCursor = true;
+            this.lbxRap.FormattingEnabled = true;
+            this.lbxRap.ItemHeight = 12;
+            this.lbxRap.Location = new System.Drawing.Point(575, 30);
+            this.lbxRap.Name = "lbxRap";
+            this.lbxRap.Size = new System.Drawing.Size(206, 220);
+            this.lbxRap.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 279);
-            this.Controls.Add(this.lbxRaplist);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.lbxRap);
+            this.Controls.Add(this.btReset);
             this.Controls.Add(this.btRap);
             this.Controls.Add(this.btStop);
             this.Controls.Add(this.btStart);
@@ -117,10 +116,10 @@ namespace StopWatch {
         private System.Windows.Forms.Label lbTimerDisp;
         private System.Windows.Forms.Button btStart;
         private System.Windows.Forms.Button btRap;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btReset;
         private System.Windows.Forms.Button btStop;
         private System.Windows.Forms.Timer tm;
-        public System.Windows.Forms.ListBox lbxRaplist;
+        private System.Windows.Forms.ListBox lbxRap;
     }
 }
 
