@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F0C5AC7-679D-4E13-994C-AF06C703096D}</ProjectGuid>
+    <ProjectGuid>{C82266BE-6C97-4294-89E1-F1FD0B87B6E0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CarReportSystem</RootNamespace>
     <AssemblyName>CarReportSystem</AssemblyName>
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarReport.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
