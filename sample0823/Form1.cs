@@ -33,6 +33,8 @@ namespace sample0823
             
             //}
             Result.Text = Math.Pow(va,ex).ToString();
+
+
         }
     }
 }
