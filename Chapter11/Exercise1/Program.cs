@@ -49,13 +49,27 @@ namespace Exercise1
             {
                 var xname = (string)xballsport.Element("name").Attribute("kanji");
                 
+           
+
                 Console.WriteLine(xname);
             }
         }
 
         private static void Exercise1_3(string file)
         {
-            
+            var xdoc = XDocument.Load("Sample.xml");
+            var ballSports = xdoc.Root.Elements()
+                             .Select(x => new
+                             {
+                                 Name = (string)x.Element("name"),
+                                 KanjiName = (string)(x.Element("name").Attribute("kanji")),
+                                 Member = (int)x.Element("teammembers"),
+                             });
+            foreach (var xballsport in xballSports)
+            {
+                Console.WriteLine("{0} {1}",
+                xballsport.Member.Max();
+            }
         }
     }
 }
