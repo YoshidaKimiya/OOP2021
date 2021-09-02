@@ -30,14 +30,16 @@ namespace Exercise1
         {
             var newfile = "sports.xml";
 
-            var element = new XElement("ballSports",
-                                new XElement("name", "サッカー", new XAttribute("kanji", "蹴球")),
-                                new XElement("teammembers", "11"),
-                                new XElement("firstplayed", "1800")
-                                );
-            var xdoc = XDocument.Load(newfile);
-            xdoc.Root.Add(file);
+            var xdoc = XDocument.Load(file);
+
+            var element = new XElement("ballsport",
+                    new XElement("name", "サッカー", new XAttribute("kanji", "蹴球")),
+                    new XElement("teammembers", "11"),
+                    new XElement("firstplayed", "1863")
+                    );
+
             xdoc.Root.Add(element);
+            xdoc.Save(newfile);
         }
 
         private static void Exercise1_1(string file)
