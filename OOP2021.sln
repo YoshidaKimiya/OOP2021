@@ -93,6 +93,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter14", "Chapter14", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section04", "Chapter14\ConsoleApp1\Section04.csproj", "{138B511C-ACC4-413D-AB67-24677D0B40CF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeatherApp", "WeatherApp", "{5F7527AA-5BA1-45EB-BFB1-615968E00868}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp", "WeatherApp\WeatherApp\WeatherApp.csproj", "{FE2FB57E-0D69-49E2-9597-6698DE46FB94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +223,10 @@ Global
 		{138B511C-ACC4-413D-AB67-24677D0B40CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{138B511C-ACC4-413D-AB67-24677D0B40CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{138B511C-ACC4-413D-AB67-24677D0B40CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2FB57E-0D69-49E2-9597-6698DE46FB94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2FB57E-0D69-49E2-9597-6698DE46FB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2FB57E-0D69-49E2-9597-6698DE46FB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2FB57E-0D69-49E2-9597-6698DE46FB94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -256,6 +264,7 @@ Global
 		{E6216D44-F634-4253-93C3-4B92B217C20B} = {AAF2F561-DC7B-4D02-956E-4B02E4F83E2E}
 		{CF0F1465-0646-49BA-BCFA-8E9FCF17E426} = {AAF2F561-DC7B-4D02-956E-4B02E4F83E2E}
 		{138B511C-ACC4-413D-AB67-24677D0B40CF} = {47B7CDA6-BF72-42DD-8D6B-6D60F3C32589}
+		{FE2FB57E-0D69-49E2-9597-6698DE46FB94} = {5F7527AA-5BA1-45EB-BFB1-615968E00868}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {852FC4EA-B7A3-4614-A542-CFBEB62FFFDF}

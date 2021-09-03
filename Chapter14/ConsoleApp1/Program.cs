@@ -13,10 +13,40 @@ namespace Section04
     class Program
     {
 
-        static void Main(string[] args) { }
+        Dictionary<string, int> AreaDic = new Dictionary<string, int>()
+        {
+                    {"前橋", 4210},
+                    {"みなかみ", 4220},
+                    {"宇都宮", 4110},
+                    {"水戸", 4010}
+        };
+
+        static void Main(string[] args) 
+        {
+            new Program();
+        }
             public Program()
             {
-                var results = GetWeatherReportFromYahoo(4610);
+                Console.WriteLine("Yahoo!週間天気予報");
+                Console.WriteLine();
+                Console.WriteLine("地域コードを入力");
+
+                int num = 1;
+
+                foreach (KeyValuePair<string, int>pair in AreaDic)
+                {
+                    Console.WriteLine("{0}:{1}", num++, pair.Key);
+                }
+
+                Console.WriteLine("9:その他(直接入力)");
+                Console.WriteLine();
+
+                Console.Write(">");
+                // 文字列として入力した数字を取り込む
+                var selectArea = Console.ReadLine();
+
+
+            var results = GetWeatherReportFromYahoo(4610);
                 foreach (var s in results)
                 {
                     Console.WriteLine(s);
