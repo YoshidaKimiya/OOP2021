@@ -52,7 +52,7 @@ namespace Section04
             int code;
             if (pos != 9)
             {
-                 code = cityCode[pos - 1]);
+                 code = cityCode([pos - 1]);
             }
             else
             {
