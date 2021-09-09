@@ -30,13 +30,16 @@ namespace RssReader
             using (var wc = new WebClient())
             {
                 wc.Headers.Add("Content-type", "charset=UTF-8");
-                var uriString = string.Format(
-                    @"http://rss.weather.yahoo.co.jp/rss/days/{0}.xml");
-                var url = new Uri(uriString);
-                var stream = wc.OpenRead(url);
+                
+               
+                var stream = wc.OpenRead(uri);
 
                 XDocument xdoc = XDocument.Load(stream);
                 var nodes = xdoc.Root.Descendants("title");
+                foreach (var node in nodes)
+                {
+                    lbTitles.Items.Add(node.Value);
+                }
                 
             }
         }
