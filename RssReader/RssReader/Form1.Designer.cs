@@ -48,7 +48,7 @@ namespace RssReader
             // 
             // tbUrl
             // 
-            this.tbUrl.Location = new System.Drawing.Point(309, 80);
+            this.tbUrl.Location = new System.Drawing.Point(277, 79);
             this.tbUrl.Name = "tbUrl";
             this.tbUrl.Size = new System.Drawing.Size(831, 43);
             this.tbUrl.TabIndex = 1;
@@ -61,6 +61,7 @@ namespace RssReader
             this.lbTitles.Name = "lbTitles";
             this.lbTitles.Size = new System.Drawing.Size(239, 472);
             this.lbTitles.TabIndex = 2;
+            this.lbTitles.Click += new System.EventHandler(this.lbTitles_Click);
             // 
             // btRead
             // 
@@ -74,7 +75,7 @@ namespace RssReader
             // 
             // wbBrowser
             // 
-            this.wbBrowser.Location = new System.Drawing.Point(309, 217);
+            this.wbBrowser.Location = new System.Drawing.Point(286, 154);
             this.wbBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbBrowser.Name = "wbBrowser";
             this.wbBrowser.ScriptErrorsSuppressed = true;
