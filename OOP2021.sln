@@ -101,6 +101,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RssReader", "RssReader", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssReader", "RssReader\RssReader\RssReader.csproj", "{396018DD-C785-4723-BE3D-EFF7DEBB6EF8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendMail", "SendMail", "{05DB6FD2-3F95-48A8-8791-E29AA3A21720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMail", "SendMail\SendMail\SendMail.csproj", "{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -235,6 +239,10 @@ Global
 		{396018DD-C785-4723-BE3D-EFF7DEBB6EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{396018DD-C785-4723-BE3D-EFF7DEBB6EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{396018DD-C785-4723-BE3D-EFF7DEBB6EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -274,6 +282,7 @@ Global
 		{138B511C-ACC4-413D-AB67-24677D0B40CF} = {47B7CDA6-BF72-42DD-8D6B-6D60F3C32589}
 		{FE2FB57E-0D69-49E2-9597-6698DE46FB94} = {5F7527AA-5BA1-45EB-BFB1-615968E00868}
 		{396018DD-C785-4723-BE3D-EFF7DEBB6EF8} = {62ADC164-C137-4377-9D23-B55C3CCC5BB7}
+		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9} = {05DB6FD2-3F95-48A8-8791-E29AA3A21720}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {852FC4EA-B7A3-4614-A542-CFBEB62FFFDF}

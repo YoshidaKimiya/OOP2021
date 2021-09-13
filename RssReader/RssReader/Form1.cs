@@ -67,7 +67,16 @@ namespace RssReader
 
         private void lbTitles_Click(object sender, EventArgs e)
         {
-            wbBrowser.Url = new Uri((items.ToArray())[lbTitles.SelectedIndex].Link);
+           // wbBrowser.Url = new Uri((items.ToArray())[lbTitles.SelectedIndex].Link);
+            lbDescription.Text = "概要\n";
+            lbDescription.Text += (items.ToArray())[lbTitles.SelectedIndex].Description;
+        }
+
+        private void btOpen_Click(object sender, EventArgs e)
+        {
+            var webForm = new Form2((items.ToArray())[lbTitles.SelectedIndex].Link);
+            webForm.Show();
+           
         }
     }
     
