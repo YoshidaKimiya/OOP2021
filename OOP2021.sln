@@ -105,6 +105,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendMail", "SendMail", "{05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMail", "SendMail\SendMail\SendMail.csproj", "{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section04_Json", "Chapter14\Section04_Json\Section04_Json.csproj", "{FE06282E-FCD6-4AF5-81B3-59BA8104BDE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +245,10 @@ Global
 		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE06282E-FCD6-4AF5-81B3-59BA8104BDE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE06282E-FCD6-4AF5-81B3-59BA8104BDE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE06282E-FCD6-4AF5-81B3-59BA8104BDE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE06282E-FCD6-4AF5-81B3-59BA8104BDE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -283,6 +289,7 @@ Global
 		{FE2FB57E-0D69-49E2-9597-6698DE46FB94} = {5F7527AA-5BA1-45EB-BFB1-615968E00868}
 		{396018DD-C785-4723-BE3D-EFF7DEBB6EF8} = {62ADC164-C137-4377-9D23-B55C3CCC5BB7}
 		{6D1B4F32-F858-498E-8BCF-1DC0722F14F9} = {05DB6FD2-3F95-48A8-8791-E29AA3A21720}
+		{FE06282E-FCD6-4AF5-81B3-59BA8104BDE1} = {47B7CDA6-BF72-42DD-8D6B-6D60F3C32589}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {852FC4EA-B7A3-4614-A542-CFBEB62FFFDF}

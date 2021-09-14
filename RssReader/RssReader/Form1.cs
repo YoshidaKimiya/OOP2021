@@ -15,6 +15,7 @@ namespace RssReader
 {
     public partial class Form1 : Form
     {
+        //https://news.yahoo.co.jp/rss/topics/top-picks.xml
         IEnumerable<ItemData> items = null;
         public Form1()
         {
