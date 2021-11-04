@@ -213,8 +213,7 @@ namespace CarReportSystem {
                 ssErrorLavel.Text = "";
                 
                 dtpDate.Value = (DateTime)carReportDataGridView.CurrentRow.Cells[1].Value;    //日付
-                cbAuthor.Text = carReportDataGridView.CurrentRow.Cells[2].Value.ToString();   //記録者
-                                                                                              //メーカー（文字列 → 列挙型）
+                cbAuthor.Text = carReportDataGridView.CurrentRow.Cells[2].Value.ToString();   //記録者                                                                                             //メーカー（文字列 → 列挙型）
                 setMakerRadioButton(
                     (CarReport.MakerGroup)Enum.Parse(typeof(CarReport.MakerGroup), carReportDataGridView.CurrentRow.Cells[3].Value.ToString()));
                 cbCarName.Text = carReportDataGridView.CurrentRow.Cells[4].Value.ToString();  //車名
