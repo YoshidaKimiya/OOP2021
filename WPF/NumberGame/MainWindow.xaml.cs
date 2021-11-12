@@ -29,15 +29,17 @@ namespace NumberGame
         }
         public void ramdom(int min, int max)
         {
+            //乱数を生成
             Random random = new Random();
             rand = random.Next(min,max);        
         }
         private void btClick(object sender, RoutedEventArgs e)
         {
+            //色変換
             Button bt = e.Source as Button;
             bt.Background = Brushes.Red;
             
-            
+            //数字の判定
             if(rand == int.Parse((string)bt.Content))
             {
                 judge.Text = "正解です";
