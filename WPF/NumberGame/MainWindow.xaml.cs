@@ -34,19 +34,19 @@ namespace NumberGame
         }
         private void btClick(object sender, RoutedEventArgs e)
         {
-            Button tb = e.Source as Button;
-            tb.Background = Brushes.Red;
+            Button bt = e.Source as Button;
+            bt.Background = Brushes.Red;
             
             
-            if(rand == int.Parse((string)tb.Content))
+            if(rand == int.Parse((string)bt.Content))
             {
                 judge.Text = "正解です";
             }
-            else if(rand < int.Parse((string)tb.Content))
+            else if(rand < int.Parse((string)bt.Content))
             {
                 judge.Text = "小さい";
             }
-            else if (rand > int.Parse((string)tb.Content))
+            else if (rand > int.Parse((string)bt.Content))
             {
                 judge.Text = "大きい";
             }
