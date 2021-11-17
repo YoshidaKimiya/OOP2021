@@ -94,9 +94,14 @@ namespace SendMail
         {
             using (var reader = XmlReader.Create("mailsetting.xml"))
             {
-                var serializer = new DataContractSerializer(typeof(Settings));
+               var serializer = new DataContractSerializer(typeof(Settings));
                 settings = serializer.ReadObject(reader) as Settings;
             }
+        }
+
+        private void tbTo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

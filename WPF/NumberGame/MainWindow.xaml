@@ -40,7 +40,8 @@
         <Button Name ="bt_23" Content="23" HorizontalAlignment="Right" Height="90" VerticalAlignment="Top" Width="90" Margin="0,414,180,0" FontSize="36" FontFamily="Rockwell Extra Bold" Click="btClick"/>
         <Button Name ="bt_24" Content="24" HorizontalAlignment="Right" Height="90" VerticalAlignment="Top" Width="90" Margin="0,414,90,0" FontSize="36" FontFamily="Rockwell Extra Bold" Click="btClick"/>
         <Button Name ="bt_25" Content="25" HorizontalAlignment="Right" Height="90" VerticalAlignment="Top" Width="90" Margin="0,414,0,0" FontSize="36" FontFamily="Rockwell Extra Bold" Click="btClick"/>
-        <TextBox Name ="judge" HorizontalAlignment="Left" Height="49" Margin="193,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="247"/>
+        <TextBox Name ="judge" HorizontalAlignment="Left" Height="49" Margin="193,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="247" FontSize="24"/>
+        <Label x:Name="lblTime" Content="00:00:000" HorizontalAlignment="Left" Height="54" Margin="-33,0,0,0" VerticalAlignment="Top" Width="276" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36"/>
 
 
 

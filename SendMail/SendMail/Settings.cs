@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SendMail
 {
-    class Settings
+    [Serializable]
+    public class Settings
     {
         private static Settings instance = null;
         
