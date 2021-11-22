@@ -26,15 +26,28 @@ namespace SendMail
 
         private void btSend_Click(object sender, EventArgs e)
         {
-            try
+            if(!Settings.Set)
             {
+
+                MessageBox.Show("送信情報を確認してください。");
+                return;
+            }
+            try
+            { 
+                
                 // メール送信のためのインスタンスを生成
                 MailMessage mailMessage = new MailMessage();
                 // 差出人アドレス
                 mailMessage.From = new MailAddress(settings.MailAddr);
                 // 宛先(To)
-                mailMessage.To.Add(tbTo.Text);
+                
 
+                if(tbTo.Text == "")
+                {
+                    MessageBox.Show("アドレスが未入力です。");
+                    return;
+                }
+                mailMessage.To.Add(tbTo.Text);
                 if(tbCc.Text != "")
                 {
                     mailMessage.CC.Add(tbCc.Text);
@@ -47,7 +60,11 @@ namespace SendMail
                 mailMessage.Subject = tbTitle.Text;
                 // 本文
                 mailMessage.Body = tbMessage.Text;
-
+                if(tbMessage.Text == null || tbMessage.Text == string.Empty)
+                {
+                    MessageBox.Show("本文が未入力です。");
+                    return;
+                }
                 // SMTPを使ってメールを送信する
                 SmtpClient smtpClient = new SmtpClient();
                 // メール送信のための認証情報を設定(ユーザー名、パスワード)
@@ -55,12 +72,15 @@ namespace SendMail
                     new NetworkCredential(settings.MailAddr, settings.Pass);
                 smtpClient.Host = settings.Host;
                 smtpClient.Port = settings.Port;
-                //smtpClient.EnableSsl = true;
+                smtpClient.EnableSsl = settings.Ssl;
                 smtpClient.SendCompleted += SmtpClient_SendCompleted;
-                string userState = "SendMail";
+                string userState = "Send";
+
+                clear();
                 smtpClient.SendAsync(mailMessage,userState);                                                                                                                                                                                                                                       
 
-               // MessageBox.Show("送信完了");
+                
+                // MessageBox.Show("送信完了");
             }
             catch (Exception ex)
             {
@@ -92,10 +112,9 @@ namespace SendMail
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (var reader = XmlReader.Create("mailsetting.xml"))
+            if (!Settings.Set)
             {
-               var serializer = new DataContractSerializer(typeof(Settings));
-                settings = serializer.ReadObject(reader) as Settings;
+                configForn.ShowDialog();
             }
         }
 
@@ -103,5 +122,15 @@ namespace SendMail
         {
 
         }
+        
+        public void clear()
+        {
+            tbTo.Text = "";
+            tbBcc.Text = "";
+            tbCc.Text = "";
+            tbTitle.Text = "";
+            tbMessage.Text = "";
+        }
     }
+
 }

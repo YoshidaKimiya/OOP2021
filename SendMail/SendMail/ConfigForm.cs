@@ -19,6 +19,7 @@ namespace SendMail
         public ConfigForm() 
         {
             InitializeComponent();
+          
         }
 
         private void btDefault_Click(object sender, EventArgs e)
@@ -74,6 +75,31 @@ namespace SendMail
         private void btCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void sendMailAdd()
+        {
+            var configSettings = new XmlWriterSettings
+            {
+                Encoding = new System.Text.UTF8Encoding(false),
+                Indent = true,
+                IndentChars = "  ",
+            };
+
+            using(var writer = XmlWriter.Create("mailsetting.xml",configSettings))
+            {
+                var serializer = new DataContractSerializer(settings.GetType());
+                serializer.WriteObject(writer, settings);
+            }
+        }
+        private void ConfigForm_Load(object sender, EventArgs e)
+        {
+            tbHost.Text = settings.Host;
+            tbPass.Text = settings.Pass;
+            tbPort.Text = settings.Port.ToString();
+            tbUserName.Text = settings.MailAddr;
+            tbSender.Text = settings.MailAddr;
+            cbSsl.Checked = settings.Ssl;
         }
     }
 }
