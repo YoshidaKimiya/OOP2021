@@ -34,6 +34,7 @@ namespace Pelmanism
             this.labelGuidance = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelCounter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelSec
@@ -64,15 +65,27 @@ namespace Pelmanism
             this.buttonStart.TabIndex = 2;
             this.buttonStart.Text = "スタート";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // labelCounter
+            // 
+            this.labelCounter.AutoSize = true;
+            this.labelCounter.Location = new System.Drawing.Point(396, 7);
+            this.labelCounter.Name = "labelCounter";
+            this.labelCounter.Size = new System.Drawing.Size(35, 12);
+            this.labelCounter.TabIndex = 3;
+            this.labelCounter.Text = "0手目";
             // 
             // FormGame
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(459, 311);
+            this.Controls.Add(this.labelCounter);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.labelGuidance);
             this.Controls.Add(this.labelSec);
@@ -90,6 +103,7 @@ namespace Pelmanism
         private System.Windows.Forms.Label labelGuidance;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelCounter;
     }
 }
 

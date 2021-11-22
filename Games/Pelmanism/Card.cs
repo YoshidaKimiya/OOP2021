@@ -20,7 +20,7 @@ namespace Pelmanism
         //カード表面の色
         public Color OpenColor { get; } = Color.White;
         //カード裏面の色
-        public Color CloseColor { get; } = Color.LightSeaGreen;
+        public Color CloseColor { get; } = Color.PaleGreen;
         
         public Card(string picture)
         {
