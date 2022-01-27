@@ -15,7 +15,7 @@ using System.Xml;
 namespace SendMail
 {
     public partial class Form1 : Form
-    {
+    {   
         private ConfigForm configForn = new ConfigForm();
 
         private Settings settings = Settings.getInstance();
